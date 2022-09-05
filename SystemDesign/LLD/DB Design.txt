@@ -1,0 +1,70 @@
+Q1.
+We want to create a food ordering app like Swiggy/Zomato.
+Hence a developer comes p with the Following DB Design
+
+Customer
+----------
+CustomerID - PK
+Name
+Address
+PhoneNo1
+PhoneNo2
+EmployeeName
+
+Order
+-----
+OrderId - PK
+CreatedDate
+Desc
+ProductId
+ProductName
+
+Product
+--------
+ProductId - PK
+ProductName
+ProductQuantity
+
+Q a) What are the problems in the above design?
+Q b) Suggest a better design for the above use case
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q2.
+We want to Build a Train Ticket Booking system
+ Requirements
+ ------------
+
+ 1.A user can book multiple seats for a particular train, for different passengers for particular class(eg: AC1, AC2, General, etc)
+ 2.The train runs from Sation1 to Station2
+ 3.The Booking should ahppen after a successful Payment only
+
+ Design the desired Tables for the above use Case
+
+ Answer:
+
+ TRAIN_BOOKING_INFO
+ -----------
+ PNR - PK
+ userId
+ trainId
+ coachId
+ class
+ fromStation
+ toStation
+ noOfSeats
+
+SEAT_BOOKING_INFO
+----------------
+seatBookingId - PK
+PNR - FK
+passengerName
+passengerAge
+gender
+seatNo
+
+BOOKING_PAYMENT_DETAILS
+-------------------------
+paymentId - PK
+PNR - FK
+modeOfPayment: CARD|UPI|NET_BANKING
+Amount
+stautus : IN_PROGRESS| SUCCESS| FAILED
