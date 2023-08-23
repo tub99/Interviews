@@ -33,9 +33,9 @@ We want to Build a Train Ticket Booking system
  Requirements
  ------------
 
- 1.A user can book multiple seats for a particular train, for different passengers for particular class(eg: AC1, AC2, General, etc)
+ 1.A user can book multiple seats for a particular train, for different passengers for General class
  2.The train runs from Sation1 to Station2
- 3.The Booking should ahppen after a successful Payment only
+ 3.The Booking should happen after a successful Payment only
 
  Design the desired Tables for the above use Case
 
