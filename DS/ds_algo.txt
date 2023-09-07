@@ -1,0 +1,37 @@
+
+Q1.  Given a string reverse it using recursion.
+i/p: abcde
+o/p: edcba
+-----------------------------------------
+public class StringReverser {
+
+    public static void main(String[] args) {
+        String input = "Hello, World!";
+        String reversed = reverseRecurse(input);
+        System.out.println("Original: " + input);
+        System.out.println("Reversed: " + reversed);
+    }
+
+    public static String reverseRecurse(String input) {
+        // Base case: if the input string is empty or has only one character, return it as is.
+        if (input == null || input.length() <= 1) {
+            return input;
+        }
+        
+        // Recursive case:
+        // 1. Take the first character of the input string.
+        // 2. Recursively reverse the rest of the string (excluding the first character).
+        // 3. Concatenate the first character with the reversed substring.
+        return reverseRecurse(input.substring(1)) + input.charAt(0);
+    }
+}
+
+Q2. Given a string str, find the length of the longest substring without repeating characters. 
+    For “GEEKSFORGEEKS”, there are two longest substrings shown in the below diagrams, with length 7
+    Output: EKSFORG, KSFORGE
+
+    Ex 2:
+    Input: clementisacap
+    Output: mentisac
+
+    
